@@ -9,5 +9,11 @@ console.log('router loaded');
 // Accessing the home-Controller
 router.get('/', homeController.home);
 
+// Acessing the user-Controller
+router.use('/users', require('./users'));
+
+// Accessing the sample-Controller
+router.use('/sample', require('./sample'));
+
 // Exporting the router to be available to other files
 module.exports = router;
